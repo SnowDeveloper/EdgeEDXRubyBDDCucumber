@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: myapp
+  password: password1
+development:
+  <<: *default
+  database: myrottenpotatoes_development
+test:
+  <<: *default
+  database: myrottenpotatoes_test
+production:
+  <<: *default
+  database: myrottenpotatoes_production
